@@ -40,6 +40,4 @@ int confuzzle(char *sid){
     j += sprintf((confuzzle + 2 * i), "%2x", d);
   }
   return j;
-
-
 }
