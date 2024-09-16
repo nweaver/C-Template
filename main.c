@@ -4,7 +4,7 @@
 #include "confuzzle.h"
 
 int main(int argc, char **argv) {
-  printf("Hello World!\n");
+  printf("Hello World!!!\n");
   if (argc < 2) {
     printf("Specify student ID as a command line argument\n");
     exit(0);

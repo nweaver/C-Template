@@ -36,8 +36,10 @@ int confuzzle(char *sid){
   uint8_t d = 0;
   for (i = 0; i < strlen(sid); ++i){
     c = (uint8_t) sid[i];
-    d = d + sbox[c];
+    d = d + sbox[c] + 1;
     j += sprintf((confuzzle + 2 * i), "%2x", d);
   }
   return j;
+
+
 }

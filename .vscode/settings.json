@@ -1,9 +1,3 @@
 {
-    "makefile.launchConfigurations": [
-        {
-            "cwd": "/home/vscode/C-Template",
-            "binaryPath": "/home/vscode/C-Template/hello",
-            "binaryArgs": []
-        }
-    ]
+    "C_Cpp.errorSquiggles": "enabled"
 }
