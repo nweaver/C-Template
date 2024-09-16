@@ -1,6 +1,12 @@
 # Prerequisites
 *.d
 
+# Binary
+hello
+
+# Emacs save files
+*~
+
 # Object files
 *.o
 *.ko
