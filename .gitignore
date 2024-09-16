@@ -61,3 +61,5 @@ dkms.conf
 CMakeFiles
 CmakeCache.txt
 cmake_install.cmake
+C__
+build
