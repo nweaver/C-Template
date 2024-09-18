@@ -29,7 +29,7 @@ static const uint8_t sbox[256] = {
  * This is to make sure you can run the debugger and development tools
  */
 int confuzzle(char *sid){
-  char *confuzzle = malloc(sizeof(char) * 2 * (strlen(sid) + 1));
+  char *confusion = malloc(sizeof(char) * 2 * (strlen(sid) + 1));
   int i;
   int j = 0;
   uint8_t c;
@@ -37,7 +37,7 @@ int confuzzle(char *sid){
   for (i = 0; i < strlen(sid); ++i){
     c = (uint8_t) sid[i];
     d = d + sbox[c] + 1;
-    j += sprintf((confuzzle + 2 * i), "%2x", d);
+    j += sprintf((confusion + 2 * i), "%2x", d);
   }
   return j;
 }
