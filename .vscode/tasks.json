@@ -6,11 +6,20 @@
 			"label": "CMake: build",
 			"command": "build",
 			"targets": [
-				"hello", "testbinary"
+				"hello",
+				"testbinary"
 			],
 			"group": "build",
 			"problemMatcher": [],
 			"detail": "CMake template build task"
+		},
+		{
+			"type": "valgrind-debug",
+			"target": "${command:cmake.launchTargetPath}",
+			"problemMatcher": [
+				"$valgrind-debug"
+			],
+			"label": "valgrind-debug: valgrind-debug"
 		}
 	]
 }
