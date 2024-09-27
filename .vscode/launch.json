@@ -44,7 +44,33 @@
                     "ignoreFailures": true
                 }
             ]
-        }
+        },
+        {
+        "name": "Launch Debugger with valgrind",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/hello",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [ {         "name": "PATH",
+        "value": "$${workspaceFolder}/build}"    } ],
+        "externalConsole": true,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          },
+          {
+            "description": "Connect to valgrind",
+            "text": "${command:valgrind-task-integration.valgrindGdbArg}",
+            "ignoreFailures": true
+          }
+        ]
+      }
+
 
     ]
 }
