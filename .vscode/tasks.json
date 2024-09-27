@@ -6,7 +6,7 @@
 			"label": "CMake: build",
 			"command": "build",
 			"targets": [
-				"hello"
+				"hello", "testbinary"
 			],
 			"group": "build",
 			"problemMatcher": [],

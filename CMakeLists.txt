@@ -19,3 +19,14 @@ add_executable(hello main.c
         confuzzle.c
         confuzzle.h)
 	
+enable_testing()
+
+
+add_executable(testbinary confuzzle.c confuzzle_test.cpp) 
+target_link_libraries(
+  testbinary
+  GTest::gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(testbinary)

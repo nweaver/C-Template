@@ -5,10 +5,31 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "(gdb) Launch Main Executable",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/hello",
+            "args": ["fubar", "baz"],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "CMake: build",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+
+        {
+            "name": "(gdb) Launch Test Harness",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/testbinary",
             "args": ["fubar", "baz"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
