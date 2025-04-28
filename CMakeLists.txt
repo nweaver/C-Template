@@ -5,7 +5,8 @@ set (CMAKE_CXX_STANDARD 20)
 # This is "Turn on ALL the hardening stuff.  There is a 
 # minor performance impact but hey, better Safe than Sorry"
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g \
--O2 -Wall -Wformat -Wformat=2 -Wconversion -Wimplicit-fallthrough \
+-O2 \
+-Wall -Wformat -Wformat=2 -Wconversion -Wimplicit-fallthrough \
 -Werror=format-security \
 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=3 \
 -D_GLIBCXX_ASSERTIONS \
